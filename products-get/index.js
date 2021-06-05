@@ -7,7 +7,7 @@ module.exports = async function (context, req) {
 
     // Format the dates
     products.forEach((product) => {
-      product.expires = format(new Date(product.expires), 'yyyy-MM-dd');
+      product.expires = format(new Date(product.expires), 'dd-MM-yyyy');
     });
 
     context.res.status(200).json(products);
